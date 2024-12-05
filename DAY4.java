@@ -6,8 +6,10 @@ public class DAY4 {
     private static boolean isMatch(char[][] grid, String word, int startRow, int startCol, int[] direction) {
         int targetLength = word.length();
         for (int i = 0; i < targetLength; i++) {
-            int newRow = startRow + i * direction[0];
-            int newCol = startCol + i * direction[1];
+
+            //moves in whatever direction is called
+            int newRow = startRow + i * direction[0]; //up,down,same
+            int newCol = startCol + i * direction[1]; //left,right,same
 
             // Check bounds
             if (newRow < 0 || newRow >= rows || newCol < 0 || newCol >= cols) {
@@ -37,15 +39,26 @@ public class DAY4 {
         cols = grid[0].length;
         int targetLength = word.length();
         boolean[][] matchGrid = new boolean[rows][cols];
-        int[] dx = { -1, -1, -1, 0, 0, 1, 1, 1 }; // All 8 directions
-        int[] dy = { -1, 0, 1, -1, 1, -1, 0, 1 };
 
+        //arrays representing directions (coordinates kinda)
+
+        // Single array for all 8 directions
+        int[][] directions = {
+            {-1, -1}, {-1, 0}, {-1, 1},
+            { 0, -1},          { 0, 1},
+            { 1, -1}, { 1, 0}, { 1, 1}
+         };
         // Search for the word in the grid
+        //check in all 8 directions
+
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
-                for (int dir = 0; dir < 8; dir++) {
-                    if (isMatch(grid, word, i, j, new int[] { dx[dir], dy[dir] })) {
-                        markMatch(matchGrid, i, j, new int[] { dx[dir], dy[dir] }, targetLength);
+                for (int dir = 0, n = directions.length; dir < n; dir++) {
+
+                    //make array
+                    //dx[0] = -1
+                    if (isMatch(grid, word, i, j, directions[dir])) {
+                        markMatch(matchGrid, i, j,  directions[dir], targetLength);
                     }
                 }
             }
