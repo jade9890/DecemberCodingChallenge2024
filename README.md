@@ -34,3 +34,9 @@ Day 5: \n
 
         difficulty level: 6/10 - I learned about adjacency lists and how it works. Used AI again to help but mainly for its pseudocode, so I didn't quite copy and paste everything compared to last time. 
 
+Day 6: 
+        start: 3:33pm
+        finish:6:30pm
+        total time:2.5 hours (I ate food)
+        Objective: find all positions the guard will visit before leaving the mapped area (input)
+        difficulty level: 4/10. Not too bad, I just needed help with some of the syntax inside the method. But I literally spent almost an hour trying to figure out a bug it was so annoying and chat was being so stupid, 
