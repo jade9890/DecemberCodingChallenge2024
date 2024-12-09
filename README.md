@@ -53,3 +53,12 @@ Day 7:
         Objective: (use backtracking) determine which equations can be made valid by inserting the operators + and * between the given numbers (evaluated strictly left-to-right) to produce the specified test value. Then, sum up the test values of all valid equations to calculate the total calibration result. 
 
         difficulty level: 6/10, I managed to make the string array, convert to int array, and everything else, but needed help with the backtrack method. I just wasn't sure how to properly use it. I did research and knew it was based on recursion but I was still confused. Not horrible though. 
+
+Day 8:
+        start: 4:48pm
+        finish: 8:38pm
+        total time: 2.5 - 3 hours (took multiple breaks)
+
+        Objective: implement collinearity detection to find antinodes in a grid. (cross product)
+
+        difficulty level: 6/10? Implementing hashmaps are also new to me so I needed help with the syntax, such as using the get and put functions, creating the hashmap, iterating through the keys and accessing the values within the keys. But everything else I did by myself, like figuring out how to put the antinodes in the correct place, how to correctly increase the count, etc. 
