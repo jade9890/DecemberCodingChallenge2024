@@ -62,3 +62,17 @@ Day 8:
         Objective: implement collinearity detection to find antinodes in a grid. (cross product)
 
         difficulty level: 6/10? Implementing hashmaps are also new to me so I needed help with the syntax, such as using the get and put functions, creating the hashmap, iterating through the keys and accessing the values within the keys. But everything else I did by myself, like figuring out how to put the antinodes in the correct place, how to correctly increase the count, etc. 
+
+Day 9:
+        start: 12:32pm
+        finish:
+        total time:
+
+        Objective: String manipulation. Compact all file blocks on a disk to eliminate gaps and calculate a checksum based on the positions and IDs of the compacted file blocks.
+
+        difficulty level: 4/10. Wasn't too bad, I had a little bug because I used the wrong length, and I needed some help making it more efficient because at first it was o(n^2). Just so you know, I have an exam soon that I've totally given up on so I'm just gonna keep my streak lol.
+
+
+
+
+
