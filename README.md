@@ -71,6 +71,13 @@ Day 9:
         Objective: String manipulation. Compact all file blocks on a disk to eliminate gaps and calculate a checksum based on the positions and IDs of the compacted file blocks.
 
         difficulty level: 4/10. Wasn't too bad, I had a little bug because I used the wrong length, and I needed some help making it more efficient because at first it was o(n^2). Just so you know, I have an exam soon that I've totally given up on so I'm just gonna keep my streak lol.
+        
+Day 10:
+        start: 3:45pm
+        finish: gave up
+        total time: gave up
+
+        Objective: I genuinely don't even know why I can't seem to solve this problem. I tried BFS and the count wasn't working properly due to a multitude of reasons, tried queues, linked lists, literally everything. This was unfortunately a fail. I'm also running on 2 hours of sleep, no food, and utter exhaustioin so this may have clouded my thinking slightly. But seriously I give up.
 
 
 
