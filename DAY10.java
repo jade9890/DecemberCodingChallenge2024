@@ -1,85 +1,121 @@
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class DAY10 {
 
-    // Directions for up, down, left, right movement
-    private static final int[] DX = {-1, 1, 0, 0};
-    private static final int[] DY = {0, 0, -1, 1};
+    //breadth first search (BFS) - Queue FIFO
+    //depth first search (DFS) - Stack LIFO
+    public static void main (String[] args){
 
-    public static int DFS(int[][] map, int x, int y, boolean[][] visited) {
-        int rows = map.length;
-        int cols = map[0].length;
+        int[][] map = {
+            {8,9,0,1,0,1,2,3},
+            {7,8,1,2,1,8,7,4}, 
+            {8,7,4,3,0,9,6,5},
+            {9,6,5,4,9,8,7,4},
+            {4,5,6,7,8,9,0,3},
+            {3,2,0,1,9,0,1,2},
+            {0,1,3,2,9,8,0,1},
+            {1,0,4,5,6,7,3,2}
+        };
 
-        // If out of bounds, already visited, or invalid start, return 0
-        if (x < 0 || y < 0 || x >= rows || y >= cols || visited[x][y]) {
-            return 0;
+        /*int[][] map = {
+            {0,5,2,3},
+            {1,2,3,4},
+            {8,6,6,5},
+            {9,8,7,6}
+        };
+*/
+        int mapRow = map.length;
+        int mapCol = map[0].length;
+
+        for (int i = 0 ; i < mapRow ; i++){
+            for (int j = 0 ; j < mapCol ; j++){
+                System.out.print(map[i][j]);
+            }
+            System.out.println("");
         }
 
-        // Mark this cell as visited
-        visited[x][y] = true;
-
-        // Current height of the cell
-        int currentHeight = map[x][y];
-
-        // Base case: if we reach 9, count it as part of the trail
-        if (currentHeight == 9) {
-            return 1;
+        int totalCount = 0;
+        for (int i = 0 ; i < mapRow ; i++){
+            for (int j = 0 ; j < mapCol ; j++){
+                if (map[i][j] == 0){
+                    int count = explore(map, i, j);
+                    System.out.println("trailhead at (" + i + "," + j + ") = " + count);
+                    totalCount += count;
+                }
+            }
         }
+        System.out.println("The sum of the scores of all trailheads is: " + totalCount);
 
-        int count = 1; // Count this cell
+    }
+     public static int explore(int[][] grid, int x, int y) {
+        int row = grid.length;
+        int col = grid[0].length;
+        int count = 1;  // Start with the current cell
 
-        // Explore all 4 possible directions
-        for (int i = 0; i < 4; i++) {
-            int nx = x + DX[i];
-            int ny = y + DY[i];
+        // Queue for BFS-like exploration
+        Queue<int[]> queue = new LinkedList<>();
+        queue.add(new int[]{x, y});
 
-            // Continue DFS only if the next cell's height is currentHeight + 1
-            if (nx >= 0 && ny >= 0 && nx < rows && ny < cols && map[nx][ny] == currentHeight + 1) {
-                count += DFS(map, nx, ny, visited);
+        // Mark the initial cell as visited
+        grid[x][y] = -1;
+
+        // Directions (up, down, left, right)
+        int[] dx = {-1, 1, 0, 0};
+        int[] dy = {0, 0, -1, 1};
+
+        while (!queue.isEmpty()) {
+            int[] cell = queue.poll();
+            int curX = cell[0];
+            int curY = cell[1];
+
+            // Explore all 4 directions (up, down, left, right)
+            for (int i = 0; i < 4; i++) {
+                int newX = curX + dx[i];
+                int newY = curY + dy[i];
+
+                // Check if the new cell is within bounds and has the value currentHeight + 1
+                if (newX >= 0 && newX < row && newY >= 0 && newY < col && grid[newX][newY] == grid[curX][curY] + 1) {
+                    count++;  // Increment count for valid cell
+                    grid[newX][newY] = -1;  // Mark as visited
+                    queue.add(new int[]{newX, newY});  // Add to queue for further exploration
+                }
             }
         }
 
         return count;
     }
-
-    public static void main(String[] args) {
-
-        int[][] map = {
-            {8, 9, 0, 1, 0, 1, 2, 3},
-            {7, 8, 1, 2, 1, 8, 7, 4},
-            {8, 7, 4, 3, 0, 9, 6, 5},
-            {9, 6, 5, 4, 9, 8, 7, 4},
-            {4, 5, 6, 7, 8, 9, 0, 3},
-            {3, 2, 0, 1, 9, 0, 1, 2},
-            {0, 1, 3, 2, 9, 8, 0, 1},
-            {1, 0, 4, 5, 6, 7, 3, 2}
-        };
-
-        int rows = map.length;
-        int cols = map[0].length;
-
-        // Print the map
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
-                System.out.print(map[i][j] + " ");
-            }
-            System.out.println();
-        }
-
-        int totalCount = 0;
-
-        // Iterate through the map to find trailheads
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
-                if (map[i][j] == 0) {
-                    // Create a fresh visited array for each trailhead
-                    boolean[][] visited = new boolean[rows][cols];
-                    int count = DFS(map, i, j, visited);
-                    System.out.println("Trailhead at (" + i + "," + j + ") = " + count);
-                    totalCount += count;
-                }
-            }
-        }
-
-        System.out.println("The sum of the scores of all trailheads is: " + totalCount);
-    }
 }
+
+
+    /*public static int DFS (int[][] grid, int x, int y){
+        int row = grid.length;
+        int col = grid[0].length;
+        int currentHeight = grid[x][y];
+        int count = 0;
+
+        if (grid[x][y] == 9){
+            return 1;
+        }
+
+        if (x-1 >= 0 && grid[x-1][y] == currentHeight + 1){
+            count += DFS(grid, x-1, y); //move up
+        }
+        if (x+1 < row && grid[x+1][y] == currentHeight + 1){
+            count += DFS(grid, x+1, y); //move down
+        }
+
+        if (y - 1 >= 0 && grid[x][y - 1] == currentHeight + 1) {
+            count += DFS(grid, x, y - 1);  // Move left
+        }
+        if (y + 1 < col && grid[x][y + 1] == currentHeight + 1) {
+            count += DFS(grid, x, y + 1);  // Move right
+        }
+
+        return count;
+    }
+} 
+    */
+//i know the problem is that it returns count when all directions are incorrect
+//which is why the output is huge
+//idk how to solve it though,

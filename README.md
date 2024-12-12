@@ -79,6 +79,13 @@ Day 10:
 
         Objective: I genuinely don't even know why I can't seem to solve this problem. I tried BFS and the count wasn't working properly due to a multitude of reasons, tried queues, linked lists, literally everything. This was unfortunately a fail. I'm also running on 2 hours of sleep, no food, and utter exhaustioin so this may have clouded my thinking slightly. But seriously I give up.
 
+Day 11:
+        start: 5:00pm
+        finish:
+        total time: failed 
+
+        Objective: Array manipulation/ dynamic list transformations. Spent over 3 hours but genuinely couldnt figure out a way to solve this without getting an infinite loop 
+
 
 
 
