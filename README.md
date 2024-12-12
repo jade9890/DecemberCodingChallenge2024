@@ -86,6 +86,15 @@ Day 11:
 
         Objective: Array manipulation/ dynamic list transformations. Spent over 3 hours but genuinely couldnt figure out a way to solve this without getting an infinite loop 
 
+Day 12
+        start: 1:40pm
+        finish: 4:38pm
+        total time: 3 hours
+
+        Objective: use DFS and hashmaps to split each plant region up, count perimeter and area and get the total cost by multiply the 2 values and adding all the costs up. 
+
+        difficulty level: 8/10. I almost gave up because the past 2 days have been fails, but I'm glad I kept going and finished even though it took forever to do. Needed help with implementing the DFS because originally I just did a simply key and value with no regions so for the plant I, it was just one whole thing instead of 2 parts.
+
 
 
 
