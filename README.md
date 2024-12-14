@@ -95,6 +95,13 @@ Day 12
 
         difficulty level: 8/10. I almost gave up because the past 2 days have been fails, but I'm glad I kept going and finished even though it took forever to do. Needed help with implementing the DFS because originally I just did a simply key and value with no regions so for the plant I, it was just one whole thing instead of 2 parts.
 
+Day 13
+        start: 10:30pm
+        finish:
+        total time:
+
+        Objective: win as many prizes as possible from a set of claw machines while minimizing the total number of tokens spent. Practice optimization and use mathematic equations.
+
 
 
 
