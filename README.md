@@ -102,7 +102,14 @@ Day 13
 
         Objective: win as many prizes as possible from a set of claw machines while minimizing the total number of tokens spent. Practice optimization and use mathematic equations.
 
+        difficulty level: 7/10. So from the beginning I already messed up because I didn't read the question properly, but all in all, I think I just need to fix my method and tweak the rest of it. It's actually not a great piece of code and it doesn't even work, but I have way too many exams to be spending multiple hours figuring this out.
 
 
+Day 14:
+        start: 10am
+        finish: 10:50am
+        total time: 50 minutes
 
+        Objective: count the total number of robots per quadrant of array.
+        Difficulty level: 4/10. Not too bad, nothing was brand new to me other than the equation to get the robots to move per second. Used an array list and a private class for the robot attribute, constructor, and move method.
 
