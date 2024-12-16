@@ -113,3 +113,12 @@ Day 14:
         Objective: count the total number of robots per quadrant of array.
         Difficulty level: 4/10. Not too bad, nothing was brand new to me other than the equation to get the robots to move per second. Used an array list and a private class for the robot attribute, constructor, and move method.
 
+Day 15:
+        start: idk
+        finish: idk
+        total time: 1 / 1.5 hours 
+
+        Objective: similar to day 6, determine where the guard will be after a set of movements up down left right. Then find the sum of all boxes' GPS coordinates after the bot finishes moving
+
+        difficulty level: 4/10. Not too bad, The trickiest part was figuring out what to do if the next position was a box. My method was also being called too many times, so I had to put a flag value that set to false once the method was called. 
+
