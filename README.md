@@ -122,3 +122,11 @@ Day 15:
 
         difficulty level: 4/10. Not too bad, The trickiest part was figuring out what to do if the next position was a box. My method was also being called too many times, so I had to put a flag value that set to false once the method was called. 
 
+Day 16:
+        start: 8:20pm
+        finish: idk
+        total time: idk
+
+        Objective: find the shortest path to get from point A to point B. 
+        difficulty level: 
+

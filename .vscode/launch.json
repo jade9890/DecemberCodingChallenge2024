@@ -1,0 +1,38 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "DAY16",
+      "request": "launch",
+      "mainClass": "DAY16",
+      "projectName": "DecemberCodingChallenge2024_5a6cdaef"
+    },
+    {
+      "type": "java",
+      "name": "DAY15",
+      "request": "launch",
+      "mainClass": "DAY15",
+      "projectName": "DecemberCodingChallenge2024_5a6cdaef"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "c:/Users/jadel/OneDrive/Attachments/Documents/GitHub/DecemberCodingChallenge2024",
+      "program": "c:/Users/jadel/OneDrive/Attachments/Documents/GitHub/DecemberCodingChallenge2024/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
