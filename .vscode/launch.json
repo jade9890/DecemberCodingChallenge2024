@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "DAY20",
+      "request": "launch",
+      "mainClass": "DAY20",
+      "projectName": "DecemberCodingChallenge2024_5a6cdaef"
+    },
+    {
+      "type": "java",
       "name": "DAY16",
       "request": "launch",
       "mainClass": "DAY16",
